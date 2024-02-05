@@ -23,3 +23,19 @@ Once you have access to the Domino training environment - Guide your mouse to th
 <p align="center">
 <img src = images/git_credentials.png width="800">
 </p>
+
+<p align="center">
+<img src = images/add_credentials.png width="800">
+</p>
+
+<p align="center">
+<img src = images/git_token.png width="800">
+</p>
+
+<p align="center">
+<img src = images/projects_templates.png width="800">
+</p>
+
+<p align="center">
+<img src = images/llm_template.png width="800">
+</p>

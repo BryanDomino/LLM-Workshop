@@ -31,3 +31,79 @@ Once you have access to the Domino training environment - Guide your mouse to th
 <p align="center">
 <img src = images/git_token.png width="800">
 </p>
+
+<p align="center">
+<img src = images/projects_templates.png width="800">
+</p>
+
+<p align="center">
+<img src = images/llm_template.png width="800">
+</p>
+
+<p align="center">
+<img src = images/projects_templates.png width="800">
+</p>
+
+<p align="center">
+<img src = images/create_project.png width="800">
+</p>
+
+<p align="center">
+<img src = images/new_project1.png width="800">
+</p>
+
+<p align="center">
+<img src = images/new_project2.png width="800">
+</p>
+
+<p align="center">
+<img src = images/project_overview.png width="800">
+</p>
+
+<p align="center">
+<img src = images/data_source1.png width="800">
+</p>
+
+<p align="center">
+<img src = images/AddS3.png width="800">
+</p>
+
+<p align="center">
+<img src = images/workspace1.png width="800">
+</p>
+
+<p align="center">
+<img src = images/workspace2.png width="800">
+</p>
+
+<p align="center">
+<img src = images/workspace3.png width="800">
+</p>
+
+<p align="center">
+<img src = images/workspace4.png width="800">
+</p>
+
+<p align="center">
+<img src = images/notebook1.png width="800">
+</p>
+
+<p align="center">
+<img src = images/notebook2.png width="800">
+</p>
+
+<p align="center">
+<img src = images/notebook_datasource1.png width="800">
+</p>
+
+<p align="center">
+<img src = images/notebook_datasource2.png width="800">
+</p>
+
+<p align="center">
+<img src = images/notebook_dataset1.png width="800">
+</p>
+
+<p align="center">
+<img src = images/notebook_dataset1.png width="800">
+</p>

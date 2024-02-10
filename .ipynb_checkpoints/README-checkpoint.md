@@ -39,3 +39,127 @@ Once you have access to the Domino training environment - Guide your mouse to th
 <p align="center">
 <img src = images/llm_template.png width="800">
 </p>
+
+<p align="center">
+<img src = images/projects_templates.png width="800">
+</p>
+
+<p align="center">
+<img src = images/create_project.png width="800">
+</p>
+
+<p align="center">
+<img src = images/new_project1.png width="800">
+</p>
+
+<p align="center">
+<img src = images/new_project2.png width="800">
+</p>
+
+<p align="center">
+<img src = images/project_overview.png width="800">
+</p>
+
+<p align="center">
+<img src = images/data_source1.png width="800">
+</p>
+
+<p align="center">
+<img src = images/AddS3.png width="800">
+</p>
+
+<p align="center">
+<img src = images/workspace1.png width="800">
+</p>
+
+<p align="center">
+<img src = images/workspace2.png width="800">
+</p>
+
+<p align="center">
+<img src = images/workspace3.png width="800">
+</p>
+
+<p align="center">
+<img src = images/workspace4.png width="800">
+</p>
+
+<p align="center">
+<img src = images/notebook1.png width="800">
+</p>
+
+<p align="center">
+<img src = images/notebook2.png width="800">
+</p>
+
+<p align="center">
+<img src = images/notebook_datasource1.png width="800">
+</p>
+
+<p align="center">
+<img src = images/notebook_datasource2.png width="800">
+</p>
+
+<p align="center">
+<img src = images/notebook_dataset1.png width="800">
+</p>
+
+<p align="center">
+<img src = images/notebook_dataset2.png width="800">
+</p>
+
+<p align="center">
+<img src = images/notebook_docs.png width="800">
+</p>
+
+<p align="center">
+<img src = images/notebook_embeddings.png width="800">
+</p>
+
+<p align="center">
+<img src = images/notebook_qdrant.png width="800">
+</p>
+
+<p align="center">
+<img src = images/notebook_qdrant.png width="800">
+</p>
+
+<p align="center">
+<img src = images/setup_prompt.png width="800">
+</p>
+
+<p align="center">
+<img src = images/bitsandbytes.png width="800">
+</p>
+
+<p align="center">
+<img src = images/download_model.png width="800">
+</p>
+
+<p align="center">
+<img src = images/pipeline.png width="800">
+</p>
+
+<p align="center">
+<img src = images/question_test.png width="800">
+</p>
+
+<p align="center">
+<img src = images/question_answer.png width="800">
+</p>
+
+<p align="center">
+<img src = images/model_api_collection.png width="800">
+</p>
+
+<p align="center">
+<img src = images/app_header_image.png width="800">
+</p>
+
+<p align="center">
+<img src = images/app_api_endpoint.png width="800">
+</p>
+
+<p align="center">
+<img src = images/app_logo.png width="800">
+</p>

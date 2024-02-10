@@ -105,5 +105,61 @@ Once you have access to the Domino training environment - Guide your mouse to th
 </p>
 
 <p align="center">
-<img src = images/notebook_dataset1.png width="800">
+<img src = images/notebook_dataset2.png width="800">
+</p>
+
+<p align="center">
+<img src = images/notebook_docs.png width="800">
+</p>
+
+<p align="center">
+<img src = images/notebook_embeddings.png width="800">
+</p>
+
+<p align="center">
+<img src = images/notebook_qdrant.png width="800">
+</p>
+
+<p align="center">
+<img src = images/notebook_qdrant.png width="800">
+</p>
+
+<p align="center">
+<img src = images/setup_prompt.png width="800">
+</p>
+
+<p align="center">
+<img src = images/bitsandbytes.png width="800">
+</p>
+
+<p align="center">
+<img src = images/download_model.png width="800">
+</p>
+
+<p align="center">
+<img src = images/pipeline.png width="800">
+</p>
+
+<p align="center">
+<img src = images/question_test.png width="800">
+</p>
+
+<p align="center">
+<img src = images/question_answer.png width="800">
+</p>
+
+<p align="center">
+<img src = images/model_api_collection.png width="800">
+</p>
+
+<p align="center">
+<img src = images/app_header_image.png width="800">
+</p>
+
+<p align="center">
+<img src = images/app_api_endpoint.png width="800">
+</p>
+
+<p align="center">
+<img src = images/app_logo.png width="800">
 </p>

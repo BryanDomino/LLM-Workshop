@@ -308,7 +308,7 @@ Domino will now wrap your function in an API wrapper, package up the code and co
 
 # Section 4: Application Setup and Deployment
 
-### Lab 4.1 - Tailor App 
+### Lab 4.1 - Reopen Workspace
 To tailor the app to the Nissan Ariya use case we need to re-open our Workspace. But this time we won't need a GPU as we are doing simple development. 
 
 Navigate back to your project by clicking **Projects** and then your project name:
@@ -336,6 +336,7 @@ We have three things in this app we want to change:
 2. Add a Nissan logo to the chat interface
 3. Connect our app to the Model API we deployed
 
+### Lab 4.2 - Add Header Image
 To add a header image replace the image on line 41 with the following:
 
 ```
@@ -346,6 +347,7 @@ https://poctemppublic.s3.us-west-2.amazonaws.com/n_car.png
 <img src = images/app_header_image.png width="800">
 </p>
 
+### Lab 4.3 - Add Logo Image
 Similarly replace the image on line 90 with the following:
 
 ```
@@ -356,11 +358,17 @@ https://poctemppublic.s3.us-west-2.amazonaws.com/n_logo.png
 <img src = images/app_logo.png width="800">
 </p>
 
+### Lab 4.4 - Connect to Model API
+
 To add in the code for connecting the app to the API endpoint we can get the python code snippet from the Domino UI. Go back to the main Domino UI in your other tab and navigate back to your APIs by clicking **Model APIs** and then click on the name of your Model API:
 
 <p align="center">
 <img src = images/model_running.png width="800">
 </p>
+
+At this point your model should be running. If it is not you can contact your instructor who can share with you another running API to use.
+
+We can quickly test our model API using the following JSON in the **Request** window and click **Send**. Note the model may take a couple of seconds to send a response.
 
 ```json
 {
@@ -371,20 +379,75 @@ To add in the code for connecting the app to the API endpoint we can get the pyt
 }
 ```
 
-
-```python
-response = requests.post("https://ws.domino-eval.com:443/models/65bcac2e5f71323e384cec13/latest/model",
-                auth=(
-                    "JbvObvS7MDxXZrBn0tUGd603CTpVTzyH3bmbMV4yEv82EZfiJYOsCVbieciwsE64",
-                    "JbvObvS7MDxXZrBn0tUGd603CTpVTzyH3bmbMV4yEv82EZfiJYOsCVbieciwsE64"
-                ),
-```
-
 <p align="center">
-<img src = images/app_api_endpoint.png width="800">
+<img src = images/api_test.png width="800">
 </p>
 
-### Lab 4.2 - Deploy App 
-text
+From here you can click on the **Python** to show a snippet of the code that you can move into your app. Copy lines 3-7:
+
+<p align="center">
+<img src = images/copy_response.png width="800">
+</p>
+
+Navigate back to your Workspace tab and paste the API connection string to overwrite lines 64-68:
+
+<p align="center">
+<img src = images/app_api.png width="800">
+</p>
+
+Save the app file and sync our files again. Click on **files changes** on the left hand menu, enter a commit message and then click **Sync All Changes**. This will commit and push our code changes to Git.
+
+<p align="center">
+<img src = images/sync_files.png width="800">
+</p>
+
+### Lab 4.5 - Deploy App 
+Now we can deploy our app! Domino makes this easy to, we can simply point Domino to our application file and the platform will containerise and deploy the application for us to use. In the main Domino UI navigate click on **App** on the left hand menu and then click **Yes, I have app.sh in my code directory.**
+
+<p align="center">
+<img src = images/app_sh.png width="800">
+</p>
+
+Next give the app a name incorporating your initials again, e.g. **Nissan Ariya QA ABC**:
+
+<p align="center">
+<img src = images/app_publish.png width="800">
+</p>
+
+This will take several minutes for the container to start. The *App Status* will change from **Pending** to **Running** at which point you can click **View App** to load the application:
+
+<p align="center">
+<img src = images/app_publish.png width="800">
+</p>
+
+Now we have our working application!
+
+<p align="center">
+<img src = images/working_app.png width="800">
+</p>
+
+You can now ask questions about the Nissan Ariya. Note the model will take a few seconds to respond:
+
+<p align="center">
+<img src = images/app_answer.png width="800">
+</p>
+
+If you want to you can also change the number of output characters (tokens) that the model returns, this can be helpful if the model is returning longer bodies of text from your documents. click on the arrow on the left of the app and update the Number of Output Tokens:
+
+<p align="center">
+<img src = images/change_tokens.png width="800">
+</p>
+
+We have now completed the workshop hands on.
+
 
 # Summary
+In this workshop you have taken a Domino AI Hub Project Template and tailored it to be a Q+A bot for the Nissan Ariya user manuals. You have used Domino to:
+* Leverage GPUs
+* Connect to your S3 data
+* Vectorise it and store it in Qdrant
+* Download and run the Llama2 model from HuggingFace
+* Deploy your model as an API
+* Publish a web app to share your model with your end users
+
+Domino makes it easy to deliver complex use cases by abstracting away unnecessary complexity!

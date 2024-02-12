@@ -227,7 +227,7 @@ Lastly we can configure our pipeline with the model, tokenizer and Qdrant. Run t
 </p>
 
 ### Lab 2.2 - Test Model
-We can now test our model! Run the following cell and ask a question of your documents. For the Nissan use case this would be questions about the Nissan Aryia. For example: *"how do I change the battery in the key fob?"*
+We can now test our model! Run the following cell and ask a question of your documents. For the Nissan use case this would be questions about the Nissan Ariya. For example: *"how do I change the battery in the key fob?"*
 
 <p align="center">
 <img src = images/question_test.png width="800">
@@ -265,39 +265,124 @@ We are now finished with our workspace so we can stop it and release the GPU bac
 <img src = images/stop_workspace.png width="800">
 </p>
 
+Once the workspace has stopped click **Back to Domino** to return to the main Domino UI:
+
+<p align="center">
+<img src = images/back_to_domino.png width="800">
+</p>
+
 ### Lab 3.2 - Model API Deployment
-text
+Next we will deploy our *generate* function as a Model API in Domino. Domino takes away the complexity of deploying APIs and with a few clicks we can have our model up and running as an API.
+
+First click on the **Model APIs** button on the left menu and then **Create Model API**:
+
+<p align="center">
+<img src = images/create_model_api.png width="800">
+</p>
+
+We need to give our model a name, please include your initials e.g. "RAG_Model_ABC". Then click **Next**
+
+<p align="center">
+<img src = images/create_model_api.png width="800">
+</p>
+
+On the following page we need to point to our *generate* function that we want to deploy.
+
+We need to input the file first: **model.py**
+
+Then the name of our function: **generate**
+
+We will need to deploy this model onto a GPU so select **GPU-Model-API** as the Deployment Target
+
+Now click **Create Model API** to start the deployment process:
+
+<p align="center">
+<img src = images/model_deploy.png width="800">
+</p>
+
+Domino will now wrap your function in an API wrapper, package up the code and configuration into a Docker container and deploy that onto the platform. Note that this will take roughly 10 mins to deploy the model. We will move on and set up our App and then come back to check on the API later.
+
+<p align="center">
+<img src = images/model_preparing.png width="800">
+</p>
 
 # Section 4: Application Setup and Deployment
 
 ### Lab 4.1 - Tailor App 
-text
+To tailor the app to the Nissan Ariya use case we need to re-open our Workspace. But this time we won't need a GPU as we are doing simple development. 
+
+Navigate back to your project by clicking **Projects** and then your project name:
+
+<p align="center">
+<img src = images/back_project.png width="800">
+</p>
+
+Navigate back to the Workspaces and then we can change the settings on the Workspace by clicking **Settings**, then **Edit Settings**:
+
+<p align="center">
+<img src = images/workspace_settings.png width="800">
+</p>
+
+Change the Hardware Tier to **Small** as we won't much compute to just edit code:
+
+<p align="center">
+<img src = images/workspace_restart.png width="800">
+</p>
+
+Wait for the Workspace to restart again and then open "API_streamlit_app.py".
+
+We have three things in this app we want to change:
+1. Add a header image for the Nissan Ariya
+2. Add a Nissan logo to the chat interface
+3. Connect our app to the Model API we deployed
+
+To add a header image replace the image on line 41 with the following:
+
+```
+https://poctemppublic.s3.us-west-2.amazonaws.com/n_car.png
+```
 
 <p align="center">
 <img src = images/app_header_image.png width="800">
 </p>
-'''
-https://poctemppublic.s3.us-west-2.amazonaws.com/n_car.png
-'''
 
-<p align="center">
-<img src = images/app_api_endpoint.png width="800">
-</p>
-'''python
-response = requests.post("https://ws.domino-eval.com:443/models/65bcac2e5f71323e384cec13/latest/model",
-                auth=(
-                    "JbvObvS7MDxXZrBn0tUGd603CTpVTzyH3bmbMV4yEv82EZfiJYOsCVbieciwsE64",
-                    "JbvObvS7MDxXZrBn0tUGd603CTpVTzyH3bmbMV4yEv82EZfiJYOsCVbieciwsE64"
-                ),
-'''
+Similarly replace the image on line 90 with the following:
+
+```
+https://poctemppublic.s3.us-west-2.amazonaws.com/n_logo.png
+```
 
 <p align="center">
 <img src = images/app_logo.png width="800">
 </p>
 
-'''
-https://poctemppublic.s3.us-west-2.amazonaws.com/n_logo.png
-'''
+To add in the code for connecting the app to the API endpoint we can get the python code snippet from the Domino UI. Go back to the main Domino UI in your other tab and navigate back to your APIs by clicking **Model APIs** and then click on the name of your Model API:
+
+<p align="center">
+<img src = images/model_running.png width="800">
+</p>
+
+```json
+{
+  "data": {
+    "input_text": "how do I change the battery in the key fob?",
+    "max_new_tokens": 200
+  }
+}
+```
+
+
+```python
+response = requests.post("https://ws.domino-eval.com:443/models/65bcac2e5f71323e384cec13/latest/model",
+                auth=(
+                    "JbvObvS7MDxXZrBn0tUGd603CTpVTzyH3bmbMV4yEv82EZfiJYOsCVbieciwsE64",
+                    "JbvObvS7MDxXZrBn0tUGd603CTpVTzyH3bmbMV4yEv82EZfiJYOsCVbieciwsE64"
+                ),
+```
+
+<p align="center">
+<img src = images/app_api_endpoint.png width="800">
+</p>
 
 ### Lab 4.2 - Deploy App 
 text

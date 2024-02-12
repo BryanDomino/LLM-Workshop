@@ -100,6 +100,13 @@ Once you have access to the Domino training environment - Guide your mouse to th
 <img src = images/notebook_datasource2.png width="800">
 </p>
 
+'''python
+dataset_path = "copy your dataset in here"
+
+for my_bucket_object in objects:
+    object_store.download_file(my_bucket_object.key, dataset_path+"/"+my_bucket_object.key)
+'''
+
 <p align="center">
 <img src = images/notebook_dataset1.png width="800">
 </p>
@@ -116,12 +123,10 @@ Once you have access to the Domino training environment - Guide your mouse to th
 <img src = images/notebook_embeddings.png width="800">
 </p>
 
-<p align="center">
-<img src = images/notebook_qdrant.png width="800">
-</p>
+Change 'mlops' to 'nissan'
 
 <p align="center">
-<img src = images/notebook_qdrant.png width="800">
+<img src = images/notebook_qdrant_nissan.png width="800">
 </p>
 
 <p align="center">

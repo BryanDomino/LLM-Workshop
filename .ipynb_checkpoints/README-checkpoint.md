@@ -163,7 +163,7 @@ This will copy the connection details to our clipboard. Paste this into the new 
 <img src = images/notebook_datasource2.png width="800">
 </p>
 
-We now want to download the files we need from this S3 bucket. To simplify things create a new cell in the notebook and paste the following snippet of code into it and run it:
+We now want to download the files we need from this S3 bucket. To simplify things create a new cell in the notebook, and copy the following snippet of code, paste it into the new cell:
 
 ```python
 dataset_path = "copy your dataset in here"
@@ -172,32 +172,40 @@ for my_bucket_object in objects:
     object_store.download_file(my_bucket_object.key, dataset_path+"/"+my_bucket_object.key)
 ```
 
-This will download all the documents in the S3 bucket:
+Before we run this we need to get the Domino Dataset location that we will save these documents into. To find this click on **Data** again on the left, then **Datasets** then the **Copy** button next to the *Dataset Path*:
 
 <p align="center">
 <img src = images/notebook_dataset1.png width="800">
 </p>
 
+Paste this into the cell you've just added and the cell below as depicted below. This will download the documents into that dataset location and then read them and split them into chunks ready to process.
+
 <p align="center">
 <img src = images/notebook_dataset2.png width="800">
 </p>
+
+Run the next three cells to split up the document into pages:
 
 <p align="center">
 <img src = images/notebook_docs.png width="800">
 </p>
 
+In order to use these document pages we also need to download the appropriate embeddings to work with the Llama2 model. Run the cell:
+
 <p align="center">
 <img src = images/notebook_embeddings.png width="800">
 </p>
 
-Change 'mlops' to 'nissan'
+Finally we want to load our document pages processing them with the embeddings and storing them in the Qdrant Vector Database. We want to change the name of the collection. Change **mlops** to **nissan**, then run the cell. **Note:** This will take several minutes to populate the database.
 
 <p align="center">
 <img src = images/notebook_qdrant_nissan.png width="800">
 </p>
 
 ### Lab 2.2 - Configure Model
-text
+Now we have the documents stored in the Qdrant Vector Database we want to configure our Llama2 model. Firstly we can specify the prompt that we will use. Note that prompt engineering is typically a work item in it's own right and can take several iterations. For the purpose of this workshop we will simply use the one provided here. In a real scenario you could come back and iterate on this later.
+
+Run the prompt cell:
 
 <p align="center">
 <img src = images/setup_prompt.png width="800">

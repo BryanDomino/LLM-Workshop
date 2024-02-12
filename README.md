@@ -163,7 +163,7 @@ This will copy the connection details to our clipboard. Paste this into the new 
 <img src = images/notebook_datasource2.png width="800">
 </p>
 
-We now want to download the files we need from this S3 bucket. To simplify things create a new cell in the notebook and paste the following snippet of code into it and run it:
+We now want to download the files we need from this S3 bucket. To simplify things create a new cell in the notebook, and copy the following snippet of code, paste it into the new cell:
 
 ```python
 dataset_path = "copy your dataset in here"
@@ -172,69 +172,97 @@ for my_bucket_object in objects:
     object_store.download_file(my_bucket_object.key, dataset_path+"/"+my_bucket_object.key)
 ```
 
-This will download all the documents in the S3 bucket:
+Before we run this we need to get the Domino Dataset location that we will save these documents into. To find this click on **Data** again on the left, then **Datasets** then the **Copy** button next to the *Dataset Path*:
 
 <p align="center">
 <img src = images/notebook_dataset1.png width="800">
 </p>
 
+Paste this into the cell you've just added and the cell below as depicted below. This will download the documents into that dataset location and then read them and split them into chunks ready to process.
+
 <p align="center">
 <img src = images/notebook_dataset2.png width="800">
 </p>
+
+Run the next three cells to split up the document into pages:
 
 <p align="center">
 <img src = images/notebook_docs.png width="800">
 </p>
 
+In order to use these document pages we also need to download the appropriate embeddings to work with the Llama2 model. Run the cell:
+
 <p align="center">
 <img src = images/notebook_embeddings.png width="800">
 </p>
 
-Change 'mlops' to 'nissan'
+Finally we want to load our document pages processing them with the embeddings and storing them in the Qdrant Vector Database. We want to change the name of the collection. Change **mlops** to **nissan**, then run the cell. **Note:** This will take several minutes to populate the database.
 
 <p align="center">
 <img src = images/notebook_qdrant_nissan.png width="800">
 </p>
 
 ### Lab 2.2 - Configure Model
-text
+Now we have the documents stored in the Qdrant Vector Database we want to configure our Llama2 model. Firstly we can specify the prompt that we will use. Note that prompt engineering is typically a work item in it's own right and can take several iterations. For the purpose of this workshop we will simply use the one provided here. In a real scenario you could come back and iterate on this later.
+
+Run the prompt cell:
 
 <p align="center">
 <img src = images/setup_prompt.png width="800">
 </p>
 
+Ahead of downloading the model we want to configure the bitsandbytes configuration to ensure we have the right quantisation. Run the following cell:
 <p align="center">
 <img src = images/bitsandbytes.png width="800">
 </p>
 
+Now we can download the Llama2 model from hugging face to test it. Run the following cell:
 <p align="center">
 <img src = images/download_model.png width="800">
 </p>
 
+Lastly we can configure our pipeline with the model, tokenizer and Qdrant. Run the following cell:
 <p align="center">
 <img src = images/pipeline.png width="800">
 </p>
 
 ### Lab 2.2 - Test Model
-text
+We can now test our model! Run the following cell and ask a question of your documents. For the Nissan use case this would be questions about the Nissan Aryia. For example: *"how do I change the battery in the key fob?"*
 
 <p align="center">
 <img src = images/question_test.png width="800">
 </p>
+
+Run the cell and after a few moments the model will return an answer. Note you can rerun this cell several times with different questions if you wish.
 
 <p align="center">
 <img src = images/question_answer.png width="800">
 </p>
 
 # Section 3: Model API Set Up And Deployment
-model.py
+Now that we have set up our model and our Qdrant vector database we want to wrap this as an API so we can embed this document search into our downstream applications.
 
+To do this we have to make a small change to our template application code to point to the new Qdrant collection we created and then deploy the model as an API in Domino.
 
 ### Lab 3.1 - Model API Configuration
-text
+First we need to open the **model.py** file on the left hand panel. This code will initialise our model as we did in the notebook (lines 1-123) and has a python function called *generate* on line 134 that wraps our model to take a string input of the question and an optional int input of the number of tokens to return.
+
+In order to make this work with our Nissan documents we simply need to change the name of the Qdrant collection that the code is looking for on line 69. Here change **mlops** to **nissan**:
 
 <p align="center">
 <img src = images/model_api_collection.png width="800">
+</p>
+
+This is the only change we needed to make. Before we go to deploy the model we no want to sync all our code changes to the Git repository. to do this click on **files changes** on the left hand menu, enter a commit message and then click **Sync All Changes**. This will commit and push our code changes to Git.
+
+<p align="center">
+<img src = images/sync_files.png width="800">
+</p>
+
+We are now finished with our workspace so we can stop it and release the GPU back in to the pool of resources, saving ourself money:
+
+<p align="center">
+<img src = images/stop_workspace.png width="800">
 </p>
 
 ### Lab 3.2 - Model API Deployment

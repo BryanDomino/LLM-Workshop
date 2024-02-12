@@ -130,23 +130,40 @@ When your JupyterLab environment is up and running, as shown below, we can move 
 # Section 2: Guided Notebook
 
 ### Lab 2.1 - Notebook + Data Source
-text
+We can now customise the notebook to our use case. We will need to:
+* Open the Notebook
+* Fetch and Process the Documents
+* Initialise the Vector Store
+* Fetch and Initialise the Llama2 Model
+* Create the QA chain and test it!
+
+Double click on **Llama_Qdrant_RAG.ipynb** notebook in the left panel:
 
 <p align="center">
 <img src = images/notebook1.png width="800">
 </p>
 
+Run the first cell to load all the library dependencies by pressing *Shift + Enter*. 
+
+This template uses an out of the box document from Domino - but want to use the Nissan documents from our S3 bucket. We need to add a new cell to the Notebook, click the **+** in the top left:
+
 <p align="center">
 <img src = images/notebook2.png width="800">
 </p>
+
+To connect to the S3 bucket we can get the connection details from the Domino UI. Click on **Data** in the menu on the left. Then the **Copy** symbol next to the *Nexus-Workshop* and then **Python**:
 
 <p align="center">
 <img src = images/notebook_datasource1.png width="800">
 </p>
 
+This will copy the connection details to our clipboard. Paste this into the new notebook cell and run it:
+
 <p align="center">
 <img src = images/notebook_datasource2.png width="800">
 </p>
+
+We now want to download the files we need from this S3 bucket. To simplify things create a new cell in the notebook and paste the following snippet of code into it and run it:
 
 '''python
 dataset_path = "copy your dataset in here"
@@ -154,6 +171,8 @@ dataset_path = "copy your dataset in here"
 for my_bucket_object in objects:
     object_store.download_file(my_bucket_object.key, dataset_path+"/"+my_bucket_object.key)
 '''
+
+This will download all the documents in the S3 bucket:
 
 <p align="center">
 <img src = images/notebook_dataset1.png width="800">

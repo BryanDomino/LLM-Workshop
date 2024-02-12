@@ -1,32 +1,37 @@
 # Domino Hands-On Retrieval Augmented Generation Workshop
 
-#### In this workshop you will work through an end-to-end workflow broken into various labs to -
+#### In this workshop you will tailor a RAG Application to your own use case -
 
-* Read in data from a live source
-* Prepare your data in an IDE of your choice, with an option to leverage distributed computing clusters
-* Train several models in various frameworks
-* Compare model performance across different frameworks and select best performing model
-* Deploy model to a containerized endpoint and web-app frontend for consumption
-* Leverage collaboration and documentation capabilities throughout to make all work reproducible and sharable!
+* Leverage Domino's AI Hub templates
+* Utilise Domino to self-service GPUs
+* Read in documents from a live source
+* Configure a Qdrant Vector Database
+* Download and configure the Meta Llama2 model in Domino
+* Deploy model to a containerized API endpoint
+* Deploy a web-app frontend for end-user consumption
 
 
 # Section 1: Project Set Up
+First we need to start a new project based on a Domino AI Hub template. This involves configuring our Git credentals in Domino and adding our external data source, in this case S3. Then we will start a development environment using GPU infrastructure.
 
 ### Lab 1.1 - Git
-text
+We need to add our Git credentials to our Domino account. To do this click on your name in the bottom left and then on **Account Settings**:
 
 <p align="center">
 <img src = images/account_settings.png width="800">
 </p>
 
+Navigate to the **Git Credentials** section:
 <p align="center">
 <img src = images/git_credentials.png width="800">
 </p>
 
+Click on **Add Credentials**:
 <p align="center">
 <img src = images/add_credentials.png width="800">
 </p>
 
+Set a nickname of your choice, choose *Github* as your provider, select *Personal Account Token* as the access type and then enter your PAT token:
 <p align="center">
 <img src = images/git_token.png width="800">
 </p>

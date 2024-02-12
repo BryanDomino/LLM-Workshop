@@ -13,8 +13,8 @@
 # Section 1
 ## Project Set Up
 
-### Lab 1.1 - Forking Existing Projects
-Once you have access to the Domino training environment - Guide your mouse to the left blue menu and click the **Search** page. Afterwards, type the word 'Training' in the cell provided and click enter to discover any projects tagged under 'Training'. (The left blue menu shrinks to show only the icon of the pages. Unshrink the left blue menu by guiding your mouse over the icon pages.)
+### Lab 1.1 - Git
+text
 
 <p align="center">
 <img src = images/account_settings.png width="800">
@@ -31,6 +31,9 @@ Once you have access to the Domino training environment - Guide your mouse to th
 <p align="center">
 <img src = images/git_token.png width="800">
 </p>
+
+### Lab 1.2 - Project Template
+text
 
 <p align="center">
 <img src = images/projects_templates.png width="800">
@@ -60,6 +63,9 @@ Once you have access to the Domino training environment - Guide your mouse to th
 <img src = images/project_overview.png width="800">
 </p>
 
+### Lab 1.3 - Data Source
+text
+
 <p align="center">
 <img src = images/data_source1.png width="800">
 </p>
@@ -67,6 +73,9 @@ Once you have access to the Domino training environment - Guide your mouse to th
 <p align="center">
 <img src = images/AddS3.png width="800">
 </p>
+
+### Lab 1.4 - Workspace
+text
 
 <p align="center">
 <img src = images/workspace1.png width="800">
@@ -83,6 +92,12 @@ Once you have access to the Domino training environment - Guide your mouse to th
 <p align="center">
 <img src = images/workspace4.png width="800">
 </p>
+
+# Section 2
+## Project Set Up
+
+### Lab 2.1 - Notebook + Data Source
+text
 
 <p align="center">
 <img src = images/notebook1.png width="800">
@@ -129,6 +144,9 @@ Change 'mlops' to 'nissan'
 <img src = images/notebook_qdrant_nissan.png width="800">
 </p>
 
+### Lab 2.2 - Configure Model
+text
+
 <p align="center">
 <img src = images/setup_prompt.png width="800">
 </p>
@@ -145,6 +163,9 @@ Change 'mlops' to 'nissan'
 <img src = images/pipeline.png width="800">
 </p>
 
+### Lab 2.2 - Test Model
+text
+
 <p align="center">
 <img src = images/question_test.png width="800">
 </p>
@@ -153,9 +174,24 @@ Change 'mlops' to 'nissan'
 <img src = images/question_answer.png width="800">
 </p>
 
+# Section 3
+## Model API Set Up And Deployment
+
+### Lab 3.1 - Model API Configuration
+text
+
 <p align="center">
 <img src = images/model_api_collection.png width="800">
 </p>
+
+### Lab 3.2 - Model API Deployment
+text
+
+# Section 4
+## Application Setup and Deployment
+
+### Lab 4.1 - Tailor App 
+text
 
 <p align="center">
 <img src = images/app_header_image.png width="800">
@@ -168,3 +204,8 @@ Change 'mlops' to 'nissan'
 <p align="center">
 <img src = images/app_logo.png width="800">
 </p>
+
+### Lab 4.2 - Deploy App 
+text
+
+# Summary

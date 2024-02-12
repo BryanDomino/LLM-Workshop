@@ -144,6 +144,9 @@ Change 'mlops' to 'nissan'
 <img src = images/notebook_qdrant_nissan.png width="800">
 </p>
 
+### Lab 2.2 - Configure Model
+text
+
 <p align="center">
 <img src = images/setup_prompt.png width="800">
 </p>
@@ -160,6 +163,9 @@ Change 'mlops' to 'nissan'
 <img src = images/pipeline.png width="800">
 </p>
 
+### Lab 2.2 - Test Model
+text
+
 <p align="center">
 <img src = images/question_test.png width="800">
 </p>
@@ -168,9 +174,24 @@ Change 'mlops' to 'nissan'
 <img src = images/question_answer.png width="800">
 </p>
 
+# Section 3
+## Model API Set Up And Deployment
+
+### Lab 3.1 - Model API Configuration
+text
+
 <p align="center">
 <img src = images/model_api_collection.png width="800">
 </p>
+
+### Lab 3.2 - Model API Deployment
+text
+
+# Section 4
+## Application Setup and Deployment
+
+### Lab 4.1 - Tailor App 
+text
 
 <p align="center">
 <img src = images/app_header_image.png width="800">
@@ -183,3 +204,8 @@ Change 'mlops' to 'nissan'
 <p align="center">
 <img src = images/app_logo.png width="800">
 </p>
+
+### Lab 4.2 - Deploy App 
+text
+
+# Summary

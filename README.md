@@ -127,7 +127,7 @@ When your JupyterLab environment is up and running, as shown below, we can move 
 <img src = images/workspace4.png width="800">
 </p>
 
-# Section 2: Notebooks
+# Section 2: Guided Notebook
 
 ### Lab 2.1 - Notebook + Data Source
 text

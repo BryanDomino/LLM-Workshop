@@ -173,6 +173,8 @@ text
 </p>
 
 # Section 3: Model API Set Up And Deployment
+model.py
+
 
 ### Lab 3.1 - Model API Configuration
 text
@@ -192,14 +194,28 @@ text
 <p align="center">
 <img src = images/app_header_image.png width="800">
 </p>
+'''
+https://poctemppublic.s3.us-west-2.amazonaws.com/n_car.png
+'''
 
 <p align="center">
 <img src = images/app_api_endpoint.png width="800">
 </p>
+'''python
+response = requests.post("https://ws.domino-eval.com:443/models/65bcac2e5f71323e384cec13/latest/model",
+                auth=(
+                    "JbvObvS7MDxXZrBn0tUGd603CTpVTzyH3bmbMV4yEv82EZfiJYOsCVbieciwsE64",
+                    "JbvObvS7MDxXZrBn0tUGd603CTpVTzyH3bmbMV4yEv82EZfiJYOsCVbieciwsE64"
+                ),
+'''
 
 <p align="center">
 <img src = images/app_logo.png width="800">
 </p>
+
+'''
+https://poctemppublic.s3.us-west-2.amazonaws.com/n_logo.png
+'''
 
 ### Lab 4.2 - Deploy App 
 text

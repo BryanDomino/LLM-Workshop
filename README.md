@@ -165,12 +165,12 @@ This will copy the connection details to our clipboard. Paste this into the new 
 
 We now want to download the files we need from this S3 bucket. To simplify things create a new cell in the notebook and paste the following snippet of code into it and run it:
 
-'''python
+```python
 dataset_path = "copy your dataset in here"
 
 for my_bucket_object in objects:
     object_store.download_file(my_bucket_object.key, dataset_path+"/"+my_bucket_object.key)
-'''
+```
 
 This will download all the documents in the S3 bucket:
 

@@ -1,4 +1,4 @@
-## Domino Hands-On Workshop: TODO
+# Domino Hands-On Retrieval Augmented Generation Workshop
 
 #### In this workshop you will work through an end-to-end workflow broken into various labs to -
 
@@ -10,8 +10,7 @@
 * Leverage collaboration and documentation capabilities throughout to make all work reproducible and sharable!
 
 
-# Section 1
-## Project Set Up
+# Section 1: Project Set Up
 
 ### Lab 1.1 - Git
 text
@@ -93,8 +92,7 @@ text
 <img src = images/workspace4.png width="800">
 </p>
 
-# Section 2
-## Project Set Up
+# Section 2: Notebooks
 
 ### Lab 2.1 - Notebook + Data Source
 text
@@ -174,8 +172,7 @@ text
 <img src = images/question_answer.png width="800">
 </p>
 
-# Section 3
-## Model API Set Up And Deployment
+# Section 3: Model API Set Up And Deployment
 
 ### Lab 3.1 - Model API Configuration
 text
@@ -187,8 +184,7 @@ text
 ### Lab 3.2 - Model API Deployment
 text
 
-# Section 4
-## Application Setup and Deployment
+# Section 4: Application Setup and Deployment
 
 ### Lab 4.1 - Tailor App 
 text

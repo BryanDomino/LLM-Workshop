@@ -417,7 +417,7 @@ Next give the app a name incorporating your initials again, e.g. **Nissan Ariya 
 This will take several minutes for the container to start. The *App Status* will change from **Pending** to **Running** at which point you can click **View App** to load the application:
 
 <p align="center">
-<img src = images/app_publish.png width="800">
+<img src = images/app_status.png width="800">
 </p>
 
 Now we have our working application!

@@ -283,7 +283,7 @@ First click on the **Model APIs** button on the left menu and then **Create Mode
 We need to give our model a name, please include your initials e.g. "RAG_Model_ABC". Then click **Next**
 
 <p align="center">
-<img src = images/create_model_api.png width="800">
+<img src = images/model_name.png width="800">
 </p>
 
 On the following page we need to point to our *generate* function that we want to deploy.

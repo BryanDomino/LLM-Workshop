@@ -239,7 +239,7 @@ Run the cell and after a few moments the model will return an answer. Note you c
 <img src = images/question_answer.png width="800">
 </p>
 
-# Section 3: Model API Set Up And Deployment
+# Section 3: Model API Setup And Deployment
 Now that we have set up our model and our Qdrant vector database we want to wrap this as an API so we can embed this document search into our downstream applications.
 
 To do this we have to make a small change to our template application code to point to the new Qdrant collection we created and then deploy the model as an API in Domino.

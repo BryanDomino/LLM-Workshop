@@ -245,7 +245,11 @@ Now that we have set up our model and our Qdrant vector database we want to wrap
 To do this we have to make a small change to our template application code to point to the new Qdrant collection we created and then deploy the model as an API in Domino.
 
 ### Lab 3.1 - Model API Configuration
-First we need to open the **model.py** file on the left hand panel. This code will initialise our model as we did in the notebook (lines 1-123) and has a python function called *generate* on line 134 that wraps our model to take a string input of the question and an optional int input of the number of tokens to return.
+First we need to open the **model.py** file on the left hand panel. Review this code briefly. This code will initialise our model as we did in the notebook (lines 1-123) and has a python function called *generate* on line 134 that wraps our model to take a string input of the question and an optional int input of the number of tokens to return. We will point Domino at this function later to wrap it as an API:
+
+<p align="center">
+<img src = images/generate.png width="800">
+</p>
 
 In order to make this work with our Nissan documents we simply need to change the name of the Qdrant collection that the code is looking for on line 69. Here change **mlops** to **nissan**:
 
@@ -393,6 +397,12 @@ Navigate back to your Workspace tab and paste the API connection string to overw
 
 <p align="center">
 <img src = images/app_api.png width="800">
+</p>
+
+Domino has a open framework for deploying web applications, so we can deploy different types of web application frameworks. In this example we have written a Streamlit app. In order to run this app we have to tell Domino what app file to run and set the ports to be compatible with the platform. To do this we have defined a script to run this. Open and review ```app.sh```. This code could be changed if we wanted to deploy a different type of app, but in this case we do not need to make any changes.
+
+<p align="center">
+<img src = images/app_sh2.png width="800">
 </p>
 
 Save the app file and sync our files again. Click on **files changes** on the left hand menu, enter a commit message and then click **Sync All Changes**. This will commit and push our code changes to Git.

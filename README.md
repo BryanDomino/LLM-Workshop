@@ -89,7 +89,7 @@ To do this click on **Data** on the left hand menu and then **Add Data Source**:
 <img src = images/data_source1.png width="800">
 </p>
 
-From here we can see a list of the data sources we have access to. Click on the **Nissan-Workshop** S3 connector. 
+From here we can see a list of the data sources we have access to. Click on the **-Workshop** S3 connector. 
 
 To simplify things in this workshop the data sources have been added with service accounts, but in many organisations you would have to put in your individiual credentials to connect to the data source.
 
@@ -145,7 +145,7 @@ Double click on **Llama_Qdrant_RAG.ipynb** notebook in the left panel:
 
 Run the first cell to load all the library dependencies by pressing *Shift + Enter*. 
 
-This template uses an out of the box document from Domino - but want to use the Nissan documents from our S3 bucket. We need to add a new cell to the Notebook, click the **+** in the top left:
+This template uses an out of the box document from Domino - but we want to use the Nissan documents from our S3 bucket. In order to do that we need to add a new cell to the Notebook, click the **+** in the top left:
 
 <p align="center">
 <img src = images/notebook2.png width="800">

@@ -13,7 +13,7 @@
 # Preparation
 - Ensure you can log in to the workshop deployment at (https://ws.domino-eval.com). Your username and password will be emailed to you. The Deployment will *NOT* be accessible until the workshop day.
 - Create a Personal access token (Token Classic) here (https://github.com/settings/tokens)
-- Add the Token to your account settings inside the workshop deployment according to these instructions [Option 2: Personal Access Token](https://docs.dominodatalab.com/en/latest/user_guide/314004/import-git-repositories/#tr9)
+- Add the Token to your account settings inside the workshop deployment according to these instructions [Git Token](https://github.com/BryanDomino/LLM-Workshop/tree/main?tab=readme-ov-file#lab-11---git)
 
 # Section 1: Project Set Up
 First we need to start a new project based on a Domino AI Hub template. This involves configuring our Git credentals in Domino and adding our external data source, in this case S3. Then we will start a development environment using GPU infrastructure.

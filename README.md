@@ -348,7 +348,7 @@ We have three things in this app we want to change:
 To add a header image replace the image on line 41 with the following:
 
 ```
-https://poctemppublic.s3.us-west-2.amazonaws.com/n_car.png
+https://futurium.ec.europa.eu/sites/default/files/2020-06/eu-ai-alliance-3_0.png
 ```
 
 <p align="center">
@@ -359,7 +359,7 @@ https://poctemppublic.s3.us-west-2.amazonaws.com/n_car.png
 Similarly replace the image on line 90 with the following:
 
 ```
-https://poctemppublic.s3.us-west-2.amazonaws.com/n_logo.png
+https://ec.europa.eu/regional_policy/images/information-sources/logo-download-center/eu_flag.jpg
 ```
 
 <p align="center">

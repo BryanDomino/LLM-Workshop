@@ -231,7 +231,7 @@ Lastly we can configure our pipeline with the model, tokenizer and Qdrant. Run t
 </p>
 
 ### Lab 2.2 - Test Model
-We can now test our model! Run the following cell and ask a question of your documents. For the our use case this would be questions about the EU AI Regulation. For example: *"NEED A QUESTION HERE"*
+We can now test our model! Run the following cell and ask a question of your documents. For the our use case this would be questions about the EU AI Regulation. For example: *"Does the EU act talk about ethics?"*
 
 <p align="center">
 <img src = images/question_test.png width="800">
@@ -381,7 +381,7 @@ We can quickly test our model API using the following JSON in the **Request** wi
 ```json
 {
   "data": {
-    "input_text": "how do I change the battery in the key fob?",
+    "input_text": "Do the EU act talk about ethics?",
     "max_new_tokens": 200
   }
 }

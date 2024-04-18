@@ -261,7 +261,7 @@ In order to make this work with our documents we simply need to verify the name 
 <img src = images/model_api_collection.png width="800">
 </p>
 
-This is the only change we needed to make. Before we go to deploy the model we want to sync all our code changes to the Git repository. to do this click on **files changes** on the left hand menu, enter a commit message and then click **Sync All Changes**. This will commit and push our code changes to Git.
+Before we go to deploy the model we want to sync all our code changes to the Git repository. to do this click on **files changes** on the left hand menu, enter a commit message and then click **Sync All Changes**. This will commit and push our code changes to Git.
 
 <p align="center">
 <img src = images/sync_files.png width="800">

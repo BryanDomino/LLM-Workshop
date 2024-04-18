@@ -149,7 +149,7 @@ Double click on **Llama_Qdrant_RAG.ipynb** notebook in the left panel:
 
 Run the first cell to load all the library dependencies by pressing *Shift + Enter*. 
 
-This template uses an out of the box document from Domino - but we want to use the Nissan documents from our S3 bucket. In order to do that we need to add a new cell to the Notebook, click the **+** in the top left:
+This template uses an out of the box document from Domino - but we want to use the documents from our S3 bucket. In order to do that we need to add a new cell to the Notebook, click the **+** in the top left:
 
 <p align="center">
 <img src = images/notebook2.png width="800">
@@ -200,7 +200,7 @@ In order to use these document pages we also need to download the appropriate em
 <img src = images/notebook_embeddings.png width="800">
 </p>
 
-Finally we want to load our document pages processing them with the embeddings and storing them in the Qdrant Vector Database. We want to change the name of the collection. Change **mlops** to **nissan**, then run the cell. **Note:** This will take several minutes to populate the database.
+Finally we want to load our document pages processing them with the embeddings and storing them in the Qdrant Vector Database. **Note:** This will take several minutes to populate the database.
 
 <p align="center">
 <img src = images/notebook_qdrant_nissan.png width="800">
@@ -231,7 +231,7 @@ Lastly we can configure our pipeline with the model, tokenizer and Qdrant. Run t
 </p>
 
 ### Lab 2.2 - Test Model
-We can now test our model! Run the following cell and ask a question of your documents. For the Nissan use case this would be questions about the Nissan Ariya. For example: *"how do I change the battery in the key fob?"*
+We can now test our model! Run the following cell and ask a question of your documents. For the our use case this would be questions about the EU AI Regulation. For example: *"NEED A QUESTION HERE"*
 
 <p align="center">
 <img src = images/question_test.png width="800">
@@ -255,7 +255,7 @@ First we need to open the **model.py** file on the left hand panel. Review this 
 <img src = images/generate.png width="800">
 </p>
 
-In order to make this work with our Nissan documents we simply need to change the name of the Qdrant collection that the code is looking for on line 69. Here change **mlops** to **nissan**:
+In order to make this work with our documents we simply need to verify the name of the Qdrant collection that the code is looking for on line 69. Ensure it states **mlops**:
 
 <p align="center">
 <img src = images/model_api_collection.png width="800">
@@ -317,7 +317,7 @@ Domino will now wrap your function in an API wrapper, package up the code and co
 # Section 4: Application Setup and Deployment
 
 ### Lab 4.1 - Reopen Workspace
-To tailor the app to the Nissan Ariya use case we need to re-open our Workspace. But this time we won't need a GPU as we are doing simple development. 
+To tailor the app to our use case we need to re-open our Workspace. But this time we won't need a GPU as we are doing simple development. 
 
 Navigate back to your project by clicking **Projects** and then your project name:
 
@@ -340,8 +340,8 @@ Change the Hardware Tier to **Small** as we won't much compute to just edit code
 Wait for the Workspace to restart again and then open "API_streamlit_app.py".
 
 We have three things in this app we want to change:
-1. Add a header image for the Nissan Ariya
-2. Add a Nissan logo to the chat interface
+1. Add a header image for the EU AI ACT
+2. Add a EU logo to the chat interface
 3. Connect our app to the Model API we deployed
 
 ### Lab 4.2 - Add Header Image
@@ -422,7 +422,7 @@ Now we can deploy our app! Domino makes this easy to, we can simply point Domino
 <img src = images/app_sh.png width="800">
 </p>
 
-Next give the app a name incorporating your initials again, e.g. **Nissan Ariya QA ABC**:
+Next give the app a name incorporating your initials again, e.g. **EU AI QA**:
 
 <p align="center">
 <img src = images/app_publish.png width="800">
@@ -440,7 +440,7 @@ Now we have our working application!
 <img src = images/working_app.png width="800">
 </p>
 
-You can now ask questions about the Nissan Ariya. Note the model will take a few seconds to respond:
+You can now ask questions about the AI EU act. Note the model will take a few seconds to respond:
 
 <p align="center">
 <img src = images/app_answer.png width="800">
@@ -456,7 +456,7 @@ We have now completed the workshop hands on.
 
 
 # Summary
-In this workshop you have taken a Domino AI Hub Project Template and tailored it to be a Q+A bot for the Nissan Ariya user manuals. You have used Domino to:
+In this workshop you have taken a Domino AI Hub Project Template and tailored it to be a QA bot for the EU AI act. You have used Domino to:
 * Leverage GPUs
 * Connect to your S3 data
 * Vectorise it and store it in Qdrant
